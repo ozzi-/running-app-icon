@@ -1,0 +1,42 @@
+--- a/usr/share/lipstick-jolla-home-qt5/switcher/SwitcherItem.qml
++++ b/usr/share/lipstick-jolla-home-qt5/switcher/SwitcherItem.qml
+@@ -304,6 +304,39 @@
+         running: launching
+     }
+ 
++    // running-app-icon: overlay the app's icon at the bottom-centre of each
++    // running-app preview card so running apps can be identified at a glance
++    Item {
++        id: appIconOverlay
++        visible: !hideCover && launcherItem && launcherItem.iconId
++        z: 10
++
++        property real badgeSize: Math.min(parent.width, parent.height) * 0.26
++
++        width: badgeSize
++        height: badgeSize
++        anchors.horizontalCenter: parent.horizontalCenter
++        anchors.bottom: parent.bottom
++        anchors.bottomMargin: Math.round(badgeSize * 0.18)
++
++        Behavior on opacity { FadeAnimation { duration: 300 } }
++
++        Rectangle {
++            anchors.fill: parent
++            radius: appIconOverlay.width * 0.5
++            color: Qt.rgba(0.07, 0.08, 0.10, 0.62)
++            border.width: Math.max(1, appIconOverlay.width * 0.02)
++            border.color: Qt.rgba(1.0, 1.0, 1.0, 0.45)
++        }
++
++        LauncherIcon {
++            anchors.centerIn: parent
++            size: appIconOverlay.width * 0.62
++            icon: launcherItem ? launcherItem.iconId : ""
++            layer.effect: null
++        }
++    }
++
+     Component {
+         id: coverActionIndicators
+ 
