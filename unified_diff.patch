@@ -4,7 +4,7 @@
          running: launching
      }
  
-+    // running-app-icon: overlay the app's icon at the bottom-centre of each
++    // running-app-icon: overlay the app's icon at the top-centre of each
 +    // running-app preview card so running apps can be identified at a glance
 +    Item {
 +        id: appIconOverlay
@@ -16,8 +16,8 @@
 +        width: badgeSize
 +        height: badgeSize
 +        anchors.horizontalCenter: parent.horizontalCenter
-+        anchors.bottom: parent.bottom
-+        anchors.bottomMargin: Math.round(badgeSize * 0.18)
++        anchors.top: parent.top
++        anchors.topMargin: Math.round(badgeSize * 0.18)
 +
 +        Behavior on opacity { FadeAnimation { duration: 300 } }
 +

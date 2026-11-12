@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 NAME="running-app-icon"
-VER="1.0.0"
+VER="1.1.0"
 OUT="dist/${NAME}-${VER}.zip"
 
 mkdir -p dist

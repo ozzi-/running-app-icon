@@ -26,7 +26,7 @@ the app's preview is visible.
 
     ./build.sh
 
-Produces `dist/running-app-icon-1.0.0.zip` (flat: `unified_diff.patch` +
+Produces `dist/running-app-icon-1.1.0.zip` (flat: `unified_diff.patch` +
 `main.png`), which is the archive Patchmanager2 installs.
 
 ## Install
