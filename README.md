@@ -5,6 +5,9 @@ A **Patchmanager2** patch for Sailfish OS.
 Overlays each running app's icon at the bottom-centre of its switcher preview
 card on the home screen, so you can tell which app is which at a glance.
 
+## Patchmanager 2
+Available here: https://coderus.openrepos.net/pm2/project/running-app-icon
+
 ## How it works
 
 This is a PM2 (unified-diff) patch. It adds a small icon badge to the shell's
@@ -15,6 +18,9 @@ running-app preview card by patching:
 The badge reuses the shell's own `LauncherIcon` and the card's
 `launcherItem.iconId`, so it shows each app's real icon. It only appears while
 the app's preview is visible.
+
+## How it looks
+![screenshot](https://raw.githubusercontent.com/ozzi-/running-app-icon/refs/heads/main/running-app-icon-Screenshot_20261112_222508_001.png)
 
 ## Files
 
